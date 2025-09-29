@@ -1,0 +1,87 @@
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+    double firstnum, secnum, result;
+
+    
+
+    private void AC_btnClick(object sender, RoutedEventArgs e)
+    {
+        dspl.Text = "0";
+    }
+
+    private void operator_click(object sender, RoutedEventArgs e)
+    {
+        Button bt = sender as Button;
+        selectedoperator = bt.Content.ToString();
+        MessageBox.Show(selectedoperator);
+        firstnum = Convert.ToDouble(dspl.Text);
+        dspl.Text = "0";
+    }
+
+    private void Sum_Diff(object sender, RoutedEventArgs e)
+    {
+        dspl.Text = (-1 * Convert.ToDouble(dspl.Text)).ToString();
+    }
+
+    private void equal_btnclick(object sender, RoutedEventArgs e)
+    {
+        Button bt1 = sender as Button;
+        secnum = Convert.ToDouble(dspl.Text);
+        switch(selectedoperator) {
+            case "+":
+                result = firstnum + secnum;
+                dspl.Text = result.ToString();
+                break;
+            case "-":
+                result = firstnum - secnum;
+                dspl.Text = result.ToString();
+                break;
+            case "*":
+                result = firstnum * secnum;
+                dspl.Text = result.ToString();
+                break;
+            case "/":
+                if(secnum != 0)
+                {
+                    result = firstnum / secnum;
+                    dspl.Text = result.ToString();
+                } else
+                {
+                    dspl.Text = "Error : Divide by 0";
+                }
+                break;
+            case "%":
+                result = (firstnum / secnum) * 100;
+                dspl.Text = result.ToString();
+                break;
+        }
+    }
+
+    string selectedoperator = " ";
+    private void btn_click(object sender, RoutedEventArgs e)
+    {
+        Button bt = sender as Button;
+        if (dspl.Text == "0" && bt.Content.ToString() == ".")
+        {
+            dspl.Text = "0.";
+            return;
+        }
+        if (dspl.Text == "0" && bt.Content.ToString() != ".")
+        {
+            dspl.Text = bt.Content.ToString();
+            return;
+        }
+        if (dspl.Text.Contains(".") && bt.Content.ToString() == ".")
+        {
+            return;
+        }
+        else
+        {
+            dspl.Text += bt.Content.ToString();
+        }
+    }
+}
