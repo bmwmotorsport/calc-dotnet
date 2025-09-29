@@ -1,0 +1,118 @@
+    <ScrollViewer>
+        <Border BorderBrush="Black" BorderThickness="3" CornerRadius="10" Height="525" Width="475">
+            <Grid Height="500" Width="450">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="Black" BorderThickness="3" Background="#60fc84" CornerRadius="10" Grid.ColumnSpan="4">
+                    <Viewbox HorizontalAlignment="Right"
+VerticalAlignment="Center"
+Grid.ColumnSpan="4">
+
+                        <TextBlock x:Name="dspl" Text="0"
+      FontSize="7"></TextBlock>
+                    </Viewbox>
+                </Border>
+
+                <Button Content="AC"
+                    Grid.Column="0" Grid.Row="1"
+                    FontSize="30" Margin="7"
+                    Click="AC_btnClick"/>
+                <Button Content="+/-"
+                    Grid.Row="1" Grid.Column="1"
+                    FontSize="30" Margin="7"
+                    Click="Sum_Diff"/>
+                <Button Content="%"
+                    Grid.Row="1" Grid.Column="2"
+                    FontSize="30" Margin="7"
+                    Click="operator_click"/>
+                <Button Content="/"
+                    Grid.Row="1" Grid.Column="3"
+                    FontSize="30" Margin="7"
+                    Click="operator_click"/>
+                <Button Content="7"
+                    Grid.Row="2" Grid.Column="0"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="8"
+                    Grid.Row="2" Grid.Column="1"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="9"
+                    Grid.Row="2" Grid.Column="2"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="*"
+                    Grid.Row="2" Grid.Column="3"
+                    FontSize="30" Margin="7"
+                    Click="operator_click"/>
+                <Button Content="4"
+                    Grid.Row="3" Grid.Column="0"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="5"
+                    Grid.Row="3" Grid.Column="1"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="6"
+                    Grid.Row="3" Grid.Column="2"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="-"
+                    Grid.Row="3" Grid.Column="3"
+                    FontSize="30" Margin="7"
+                    Click="operator_click"/>
+                <Button Content="1"
+                    Grid.Row="4" Grid.Column="0"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="2"
+                    Grid.Row="4" Grid.Column="1"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="3"
+                    Grid.Row="4" Grid.Column="2"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="+"
+                    Grid.Row="4" Grid.Column="3"
+                    FontSize="30" Margin="6,7,0,7"
+                    Click="operator_click" HorizontalAlignment="Left" Width="99"/>
+                <Button Content="."
+                    Grid.Row="5" Grid.Column="0"
+                    FontSize="30" Margin="7"
+                    Click="btn_click"/>
+                <Button Content="0"
+                    Grid.Row="5" Grid.Column="1"
+                    FontSize="30" Margin="7" Grid.ColumnSpan="2"
+                    Click="btn_click"/>
+                <Button Content="="
+                    Grid.Row="5" Grid.Column="3"
+                    FontSize="30" Margin="7"
+                    Click="equal_btnclick"/>
+
+
+
+
+
+
+            </Grid>
+
+
+
+        </Border>
+
+    </ScrollViewer>
